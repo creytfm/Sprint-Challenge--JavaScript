@@ -11,11 +11,12 @@ function dinosaur(name, diet, weight, length, period) {
   this.name = {
      tyrannosaurus
   };
-  this.diet = "carnivorous";
-  this.weight = "7000kg";
-  this.length = "12m";
-  this.period = "Late Cretaceous";
+  this.diet = diet;
+  this.weight = weight;
+  this.length = length;
+  this.period = period;
 };
+var dinosaur1 = new Dinosaur('tyrannosaurus', 'canivorous', 7000, 12,);
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
@@ -23,10 +24,10 @@ function dinosaur(name, diet, weight, length, period) {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tyrannosaurus(weight));
+console.log();
 
 // What was the diet of a velociraptor?
-console.log(Object.velociraptor(diet));
+console.log();
 
 // How long was a stegosaurus?
 console.log();
