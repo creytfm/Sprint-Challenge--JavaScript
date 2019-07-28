@@ -13,7 +13,7 @@ const tyrannosaurus = {
   length: "12m",
   period: "Late Cretaceous",
   sound: function(roar) {
-console.log(`${roar}"RAWERSRARARWERSARARARRRR!"`);
+console.log(`"RAWERSRARARWERSARARARRRR!"`);
 }
 }
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -64,19 +64,39 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":9,"first_name":"Michail","university":"Universidad Católica de Ávila","email":"mrome8@shinystat.com"},
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
-/* Request 1: Create a new array called universities that contains all the universities in the graduates array.  
+/* Request 1: Create a new array called universities that contains all the universities in the graduates array.*/  
+let universities = 
+[{"id":1,"university":"Missouri Southern State College"},
+{"id":2,"university":"The School of the Art Institute of Chicago"},
+{"id":3,"university":"Marian College"},
+{"id":4,"university":"International Medical & Technological University"},
+{"id":5,"university":"Sultan Salahuddin Abdul Aziz Shah Polytechnic" },
+{"id":6,"university":"Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft"},
+{"id":7,"university":"Salem University"},
+{"id":8,"university":"Coastal Carolina University"},
+{"id":9,"university":"Universidad Católica de Ávila"},
+{"id":10,"university":"Universitat Rovira I Virgili Tarragona"}]
 
-Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-console.log(universities)
+/*Once you have the new array created, sort the universities alphabetically and log the result. */
+universities.sort();
+console.log(universities);
+/* Request 2: Create a new array called contactInfo that contains both first name and email of each student. */
 
-/* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
-The resulting contact information should have a space between the first name and the email information like this: 
-Name email@example.com
+/*The resulting contact information should have a space between the first name and the email information like this: 
+Name email@example.com*/
 
-Log the result of your new array. */
-const contactInfo = [];
+/*Log the result of your new array. */
+const contactInfo = [[{"id":1,"first_name":"Cynde","email":"ctorry0@macromedia.com"},
+{"id":2, },
+{"id":3,},
+{"id":4,},
+{"id":5,},
+{"id":6,},
+{"id":7,},
+{"id":8,},
+{"id":9,},
+{"id":10,}]];
 console.log(contactInfo);
 
 
