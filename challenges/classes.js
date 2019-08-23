@@ -1,5 +1,5 @@
-// 1. Copy and paste your prototype in here and refactor into class syntax.
-class CuboidMaker{
+
+class CuboidMaker2{
 constructor (attrs){
     this.length = attrs.length,
     this.width = attrs.width,
@@ -12,7 +12,7 @@ constructor (attrs){
     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
     }
 };
-    const cuboid = new CuboidMaker({
+    const cuboid2 = new CuboidMaker2({
       length: 4,
       width: 5,
       height: 5
