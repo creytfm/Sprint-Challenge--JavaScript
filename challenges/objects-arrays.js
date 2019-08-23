@@ -83,25 +83,30 @@ console.log(universities);
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. */
 
 
+
 /*The resulting contact information should have a space between the first name and the email information like this: 
 Name email@example.com*/
 
 /*Log the result of your new array. */
 const contactInfo = [[{"id":1,"first_name":"Cynde","email":"ctorry0@macromedia.com"},
-{"id":2, },
-{"id":3,},
-{"id":4,},
-{"id":5,},
-{"id":6,},
-{"id":7,},
-{"id":8,},
-{"id":9,},
-{"id":10,}]];
+{"id":2,"first_name":"Saundra","email":"swhal1@state.gov" },
+{"id":3,"first_name":"Lambert","email":"lparham2@techcrunch.com"},
+{"id":4,"first_name":"Modestine","email":"mdolder3@symantec.com"},
+{"id":5,"first_name":"Chick","email":"camorts4@google.com.au"},
+{"id":6,"first_name":"Jakob","email":"jharken5@spiegel.de"},
+{"id":7,"first_name":"Robbi","email":"rbrister6@redcross.org"},
+{"id":8,"first_name":"Colline","email":"cbrosh7@alibaba.com"},
+{"id":9,"first_name":"Michail","email":"mrome8@shinystat.com"},
+{"id":10,"first_name":"Hube","email":"hlethbrig9@foxnews.com"}]];
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+const uni = [{"id":1,"university":"International Medical & Technological University"}, 
+{"id":2,"university":"Salem University"},
+{"id":3,"university":"Coastal Carolina University"},
+{"id":4,"university":"Universitat Rovira I Virgili Tarragona"},
+{"id":9,"university":"Universidad Católica de Ávila"}];
 console.log(uni);
 
 
@@ -126,8 +131,10 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames = [];
-console.log(animalNames);
+zooAnimals.forEach(animal =>{
+console.log(animal.scientific_name, animal.animal_name)
+});
+
 
 /* Request 2: .map()    
 
@@ -135,24 +142,43 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
-console.log(lowerCase); 
+const lowerCase = [{"animal_name":"Jackal, asiatic"},
+  {"animal_name":"Screamer, southern"},
+  {"animal_name":"White spoonbill"},
+  {"animal_name":"White-cheeked pintail"},
+  {"animal_name":"Black-backed jackal"},
+  {"animal_name":"Brolga crane"},
+  {"animal_name":"Common melba finch"},
+  {"animal_name":"Pampa gray fox"},
+  {"animal_name":"Hawk-eagle, crowned"},
+  {"animal_name":"Australian pelican"}
+]; 
+animalslc = lowerCase.map(function(lowerCase) {
+  return lowerCase.animal_name.toUpperCase();
+});
 
+console.log(animalslc);
+ 
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
-
 */
-const lowerPopulation = [];
+let lowerPopulation = zooAnimals.filter(function(zooAnimals){
+  return zooAnimals.population < 5;
+})
+
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
-
 */
-const populationTotal = 0;
-console.log(populationTotal);
+let totalPopualtion = zooAnimals.reduce((acc, currentValue) =>
+  {return acc + currentValue.population;
+}, 0);
+console.table(totalPopualtion);
+
+
 
 
 /* 
